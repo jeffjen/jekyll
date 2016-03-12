@@ -2,7 +2,9 @@ FROM ruby:latest
 MAINTAINER YI-HUNG JEN <yihungjen@gmail.com>
 
 # install jekyll blogging framework
-RUN gem install jekyll
+RUN gem install \
+    jekyll \
+    jekyll-gist
 
 ENTRYPOINT ["jekyll"]
 CMD ["--help"]
